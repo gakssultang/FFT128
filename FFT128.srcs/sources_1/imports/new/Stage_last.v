@@ -31,7 +31,7 @@ Revision History
 2017.02.15: Started by Sunwoo Kim
 *******************************************************************************/
 
-module Stage6 #(
+module Stage_last #(
 	parameter BW=16,
 	parameter N =1
 )(
@@ -78,8 +78,5 @@ always@(posedge clk) begin
 
 	end
 end
-/////////////////////////////////////////////////////
-//////////     Fill your code here    ///////////////
-/////////////////////////////////////////////////////
 
 endmodule
