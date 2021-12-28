@@ -177,8 +177,8 @@ module MULT
     reg signed [11:0] temp_re; //[10:0]
     reg signed [11:0] temp_im; //[10:0]
     
-    wire signed [BW+12:0] buf_re; //[23:0]
-    wire signed [BW+12:0] buf_im; //[23:0]
+    wire signed [BW+11:0] buf_re; //[23:0]
+    wire signed [BW+11:0] buf_im; //[23:0]
           
     always@(*) begin
     	if (N==64) begin

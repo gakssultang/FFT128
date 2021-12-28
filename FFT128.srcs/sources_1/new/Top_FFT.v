@@ -31,58 +31,64 @@ Revision History
 2017.02.15: Started by Sunwoo Kim
 *******************************************************************************/
 
-module Stage #(
-	parameter BW=16,
-	parameter N =32
-)(
-	input 			nrst,clk,bf_en,
-	input [BW-2:0] 	inReal,inImag,
-	input [5:0]    	cnt,
-	input 			valid,
-	output[BW-1:0] 	outReal,outImag
+module Top_FFT #(	
+	parameter in_BW = 16,
+	parameter out_BW= 22,
+	parameter cut_BW= 6
+) (
+	input                      nrst,clk,start,
+	input                      valid,
+	input [in_BW-1:0]          inReal,inImag,
+	output[out_BW-cut_BW-1:0]  outReal,outImag	//reviced
 );
 
-reg	 [BW-2:0] rReal,rImag;
+wire [5:0] cnt;
 
-wire [BW-1:0] bf_x[1:0];
-wire [BW-1:0] bf_y[1:0];
+wire [in_BW	 :0] sig1[1:0];
+wire [in_BW+1:0] sig2[1:0];
+wire [in_BW+2:0] sig3[1:0];
+wire [in_BW+3:0] sig4[1:0];
+wire [in_BW+4:0] sig5[1:0];
+wire [in_BW+5:0] sig6[1:0];
 
-wire [BW-1:0] mult_out[1:0];
+wire	en_s1,en_s5,en_s6;
+reg	en_s2;
+reg [2:0] en_s4;
+reg	[1:0] en_s3;
 
-wire [BW-1:0] sr_out[1:0];
+Counter cnt0(nrst,clk,start, valid,cnt);
+Stage #(in_BW+1,32) stage1(nrst,clk,en_s1,cnt,inReal,inImag, valid, sig1[0],sig1[1]);
+Stage #(in_BW+2,16) stage2(nrst,clk,en_s2,cnt,sig1[0],sig1[1], valid, sig2[0],sig2[1]);
+Stage #(in_BW+3,8 ) stage3(nrst,clk,en_s3[1],cnt,sig2[0],sig2[1], valid, sig3[0],sig3[1]);
+Stage #(in_BW+4,4 ) stage4(nrst,clk,en_s4[2],cnt,sig3[0],sig3[1], valid, sig4[0],sig4[1]);
+Stage #(in_BW+5,2 ) stage5(nrst,clk,en_s5,cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
+Stage6 #(in_BW+6,1 ) stage6(nrst,clk,en_s6   ,sig5[0],sig5[1], valid, sig6[0],sig6[1]);
 
-wire [BW-1:0] mux0[1:0];
-wire [BW-1:0] mux1[1:0];
+assign outReal = sig6[0][in_BW+5 : cut_BW];
+assign outImag = sig6[1][in_BW+5 : cut_BW];
 
-
-assign mux0[0] = bf_en? bf_x[0] : sr_out[0];
-assign mux0[1] = bf_en? bf_x[1] : sr_out[1];
-
-assign mux1[0] = bf_en? bf_y[0] : {rReal[BW-2],rReal};
-assign mux1[1] = bf_en? bf_y[1] : {rImag[BW-2],rImag};
-
-Shift_Reg #(BW,N) sr0(nrst,clk,mux1[0],valid,sr_out[0]);
-Shift_Reg #(BW,N) sr1(nrst,clk,mux1[1],valid,sr_out[1]);
-
-BF #(BW)bf0({sr_out[0][BW-1],sr_out[0][BW-3:0]},{sr_out[1][BW-1],sr_out[1][BW-3:0]},rReal,rImag,bf_x[0],bf_x[1],bf_y[0],bf_y[1]);
-
-MULT #(BW,N) mult0(mux0[0],mux0[1],cnt[5:0],mult_out[0],mult_out[1]);
-
-assign outReal = bf_en? mux0[0] : mult_out[0];
-assign outImag = bf_en? mux0[1] : mult_out[1];
-
-
-always@(posedge clk) begin
-	if(!nrst) begin
-	  rReal <= 0;
-	  rImag <= 0;
+assign en_s1 = cnt[5];
+always@(posedge clk)
+  if(!nrst)
+    en_s2 <= 0;
+  else if(valid)
+    en_s2 <= cnt[4];
+always@(posedge clk)
+  if(!nrst)
+    en_s3 <= 0;
+  else if(valid) begin
+    en_s3[0]   <= cnt[3];
+    en_s3[1] <= en_s3[0];
+  end
+always@(posedge clk)
+  if(!nrst)
+    en_s4 <= 0;
+  else if(valid) begin
+    en_s4[0] <= cnt[2];
+		en_s4[2:1]<=en_s4[1:0];
 	end
-	else if(valid) begin
-		
-	  rReal <= inReal;
-	  rImag <= inImag;
+assign en_s5 = cnt[1];
+assign en_s6 = ~cnt[0];
 
-	end
-end
 
 endmodule
