@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec 27 15:32:40 2021
+# Process ID: 12136
+# Current directory: D:/bitelab/FFT128/FFT128.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/bitelab/FFT128/FFT128.sim/sim_1/behav/xsim/xsim.dir/tb_counter_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/bitelab/FFT128/FFT128.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/bitelab/FFT128/FFT128.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/bitelab/FFT128/FFT128.sim/sim_1/behav/xsim/xsim.dir/tb_counter_behav/webtalk/xsim_webtalk.tcl -notrace
