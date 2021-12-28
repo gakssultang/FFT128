@@ -714,8 +714,8 @@ module MULT
     assign buf_re = (temp_re*data_in_re)-(temp_im*data_in_im); // [24:0]
     assign buf_im = (temp_im*data_in_re)+(temp_re*data_in_im); // [24:0]
     
-    assign data_out_re = {buf_re[BW+12],buf_re[BW+8:10]};
-    assign data_out_im = {buf_im[BW+12],buf_im[BW+8:10]};
+    assign data_out_re = {buf_re[BW+11],buf_re[BW+8:10]};
+    assign data_out_im = {buf_im[BW+11],buf_im[BW+8:10]};
       
 endmodule                                                                                        
 

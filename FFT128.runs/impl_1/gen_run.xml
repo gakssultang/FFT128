@@ -1,54 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1640587964">
-  <File Type="ROUTE-PWR" Name="Counter_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="Counter.tcl"/>
-  <File Type="PWROPT-DCP" Name="Counter_pwropt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="Counter_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="Counter_reports.tcl"/>
-  <File Type="BG-DRC" Name="Counter.drc"/>
-  <File Type="OPT-HWDEF" Name="Counter.hwdef"/>
-  <File Type="OPT-DCP" Name="Counter_opt.dcp"/>
-  <File Type="OPT-DRC" Name="Counter_drc_opted.rpt"/>
-  <File Type="PLACE-DCP" Name="Counter_placed.dcp"/>
-  <File Type="PLACE-IO" Name="Counter_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="Counter_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Counter_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="Counter_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="Counter_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Counter_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Counter_physopt.dcp"/>
-  <File Type="BG-BIT" Name="Counter.bit"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Counter_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="Counter_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Counter_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="Counter_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="Counter_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Counter_drc_routed.rpx"/>
-  <File Type="BITSTR-MSK" Name="Counter.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Counter_methodology_drc_routed.rpt"/>
-  <File Type="BG-BGN" Name="Counter.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Counter_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-RBT" Name="Counter.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Counter_methodology_drc_routed.pb"/>
-  <File Type="BG-BIN" Name="Counter.bin"/>
-  <File Type="ROUTE-PWR-RPX" Name="Counter_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="Counter_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Counter_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Counter_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="Counter_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Counter_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="Counter_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="Counter.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Counter_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Counter_postroute_physopt_bb.dcp"/>
-  <File Type="BITSTR-NKY" Name="Counter.nky"/>
-  <File Type="BITSTR-BMM" Name="Counter_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="Counter.mmi"/>
-  <File Type="BITSTR-LTX" Name="Counter.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="Counter.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1640675326">
+  <File Type="PWROPT-DCP" Name="Top_FFT_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="Top_FFT_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Top_FFT.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="Top_FFT_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Top_FFT_reports.tcl"/>
+  <File Type="BG-DRC" Name="Top_FFT.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Top_FFT_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Top_FFT_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="Top_FFT.hwdef"/>
+  <File Type="OPT-DCP" Name="Top_FFT_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Top_FFT_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="Top_FFT_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="Top_FFT_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Top_FFT_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Top_FFT_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Top_FFT_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Top_FFT_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Top_FFT_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Top_FFT_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Top_FFT_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Top_FFT_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Top_FFT_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Top_FFT_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Top_FFT_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Top_FFT_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Top_FFT_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Top_FFT_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Top_FFT.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="Top_FFT_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Top_FFT_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Top_FFT_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Top_FFT_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Top_FFT_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Top_FFT_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="Top_FFT.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="Top_FFT_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="Top_FFT.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Top_FFT_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="Top_FFT.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Top_FFT_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="Top_FFT.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Top_FFT_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Top_FFT_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Top_FFT_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Top_FFT_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Top_FFT_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Top_FFT_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Top_FFT_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Top_FFT_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Top_FFT.vdi"/>
+  <File Type="ROUTE-CLK" Name="Top_FFT_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Top_FFT_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Top_FFT_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Top_FFT_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Top_FFT_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Top_FFT_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="Top_FFT.nky"/>
+  <File Type="BITSTR-BMM" Name="Top_FFT_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Top_FFT.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Top_FFT.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Top_FFT.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/BF.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/BF.v"/>
+        <Attr Name="ImportTime" Val="1640665436"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/Counter.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Counter.v"/>
@@ -58,14 +83,65 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MULT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/MULT.v"/>
+        <Attr Name="ImportTime" Val="1640666208"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Shift_Reg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Shift_Reg.v"/>
+        <Attr Name="ImportTime" Val="1640666642"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Stage.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Stage.v"/>
+        <Attr Name="ImportTime" Val="1640666668"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Stage_last.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Stage_last.v"/>
+        <Attr Name="ImportTime" Val="1640670011"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Top_FFT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Top_FFT.v"/>
+        <Attr Name="ImportTime" Val="1640567406"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Counter"/>
+      <Option Name="TopModule" Val="Top_FFT"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/lab2.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

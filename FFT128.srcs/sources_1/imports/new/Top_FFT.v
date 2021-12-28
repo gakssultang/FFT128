@@ -31,18 +31,18 @@ Revision History
 2017.02.15: Started by Sunwoo Kim
 *******************************************************************************/
 
-module Top_FFT #(	
-	parameter in_BW = 16,
-	parameter out_BW= 23,
-	parameter cut_BW= 7
-) (
+module Top_FFT (
 	input                      nrst,clk,start,
 	input                      valid,
 	input [in_BW-1:0]          inReal,inImag,
 	output[out_BW-cut_BW-1:0]  outReal,outImag	//reviced
 );
+    
+parameter in_BW = 16;
+parameter out_BW= 23;
+parameter cut_BW= 7;
 
-wire [5:0] cnt;
+wire [6:0] cnt;
 
 wire [in_BW	 :0] sig1[1:0];
 wire [in_BW+1:0] sig2[1:0];
@@ -50,27 +50,28 @@ wire [in_BW+2:0] sig3[1:0];
 wire [in_BW+3:0] sig4[1:0];
 wire [in_BW+4:0] sig5[1:0];
 wire [in_BW+5:0] sig6[1:0];
+wire [in_BW+6:0] sig7[1:0];
 
 wire en_s1;
-reg	en_s2;
+reg	 en_s2;
 reg	[1:0] en_s3;
 reg [2:0] en_s4;
 reg [3:0] en_s5;
 reg en_s6;
 wire en_s7;
 
-Counter cnt0(nrst,clk,start, valid,cnt);
+Counter cnt0(nrst,clk,start, valid, cnt);
 
-Stage #(in_BW+1,64) stage1(nrst,clk,en_s1,cnt,inReal,inImag, valid, sig1[0],sig1[1]);
-Stage #(in_BW+2,32) stage2(nrst,clk,en_s1,cnt,inReal,inImag, valid, sig1[0],sig1[1]);
-Stage #(in_BW+3,16) stage3(nrst,clk,en_s2,cnt,sig1[0],sig1[1], valid, sig2[0],sig2[1]);
-Stage #(in_BW+4,8 ) stage4(nrst,clk,en_s3[1],cnt,sig2[0],sig2[1], valid, sig3[0],sig3[1]);
-Stage #(in_BW+5,4 ) stage5(nrst,clk,en_s4[2],cnt,sig3[0],sig3[1], valid, sig4[0],sig4[1]);
-Stage #(in_BW+6,2 ) stage6(nrst,clk,en_s5,cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
-Stage_last #(in_BW+7,1 ) stage7(nrst,clk,en_s6   ,sig5[0],sig5[1], valid, sig6[0],sig6[1]);
+Stage #(in_BW+1,64) stage1(nrst,clk,en_s1,   cnt,inReal,inImag,   valid, sig1[0],sig1[1]);
+Stage #(in_BW+2,32) stage2(nrst,clk,en_s2,   cnt,sig1[0],sig1[1], valid, sig2[0],sig2[1]);
+Stage #(in_BW+3,16) stage3(nrst,clk,en_s3[1],cnt,sig2[0],sig2[1], valid, sig3[0],sig3[1]);
+Stage #(in_BW+4,8 ) stage4(nrst,clk,en_s4[2],cnt,sig3[0],sig3[1], valid, sig4[0],sig4[1]);
+Stage #(in_BW+5,4 ) stage5(nrst,clk,en_s5[3],cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
+Stage #(in_BW+6,2 ) stage6(nrst,clk,en_s6,   cnt,sig5[0],sig5[1], valid, sig6[0],sig6[1]);
+Stage_last #(in_BW+7,1 ) stage7(nrst,clk,en_s7   ,sig6[0],sig6[1], valid, sig7[0],sig7[1]);
 
-assign outReal = sig6[0][in_BW+5 : cut_BW];
-assign outImag = sig6[1][in_BW+5 : cut_BW];
+assign outReal = sig7[0][in_BW+6 : cut_BW];
+assign outImag = sig7[1][in_BW+6 : cut_BW];
 
 assign en_s1 = cnt[6];
 always@(posedge clk)
@@ -107,9 +108,8 @@ always@(posedge clk)
         en_s6 <= 0;
     else if(valid) begin
         en_s6 <= cnt[1];
-
     end
 
-assign en_s7 <= ~cnt[0]
+assign en_s7 = ~cnt[0];
 
 endmodule
