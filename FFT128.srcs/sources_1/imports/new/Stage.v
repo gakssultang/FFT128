@@ -66,7 +66,7 @@ Shift_Reg #(BW,N) sr1(nrst,clk,mux1[1],valid,sr_out[1]);
 
 BF #(BW)bf0({sr_out[0][BW-1],sr_out[0][BW-3:0]},{sr_out[1][BW-1],sr_out[1][BW-3:0]},rReal,rImag,bf_x[0],bf_x[1],bf_y[0],bf_y[1]);
 
-MULT #(BW,N) mult0(mux0[0],mux0[1],cnt[4:0],mult_out[0],mult_out[1]);
+MULT #(BW,N) mult0(mux0[0],mux0[1],cnt[5:0],mult_out[0],mult_out[1]);
 
 assign outReal = bf_en? mux0[0] : mult_out[0];
 assign outImag = bf_en? mux0[1] : mult_out[1];
