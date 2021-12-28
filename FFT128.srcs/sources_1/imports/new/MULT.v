@@ -181,7 +181,6 @@ module MULT
     wire signed [BW+12:0] buf_im; //[23:0]
           
     always@(*) begin
-
     	if (N==64) begin
             case(cnt)
                 6'd0 : begin
@@ -440,142 +439,273 @@ module MULT
                        temp_re <= W_re63;
                        temp_im <= W_im63;
                        end
-                              
+            endcase
+       end
+    	else if (N==32) begin
+            case(cnt[4:0])
+                5'd1 : begin
+                       temp_re <= W_re0;
+                       temp_im <= W_im0;
+                       end
+                5'd2 : begin
+                       temp_re <= W_re2;
+                       temp_im <= W_im2;
+                       end
+                5'd3 : begin
+                       temp_re <= W_re4;
+                       temp_im <= W_im4;
+                       end            
+                5'd4 : begin
+                       temp_re <= W_re6;
+                       temp_im <= W_im6;
+                       end                        
+                5'd5 : begin
+                       temp_re <= W_re8;
+                       temp_im <= W_im8;
+                       end
+                5'd6 : begin
+                       temp_re <= W_re10;
+                       temp_im <= W_im10;
+                       end
+                5'd7 : begin
+                       temp_re <= W_re12;
+                       temp_im <= W_im12;
+                       end       
+                5'd8 : begin
+                       temp_re <= W_re14;
+                       temp_im <= W_im14;
+                       end
+                5'd9 : begin
+                       temp_re <= W_re16;
+                       temp_im <= W_im16;
+                       end
+                5'd10 : begin
+                       temp_re <= W_re18;
+                       temp_im <= W_im18;
+                       end
+                5'd11 : begin
+                       temp_re <= W_re20;
+                       temp_im <= W_im20;
+                       end
+                5'd12 : begin
+                       temp_re <= W_re22;
+                       temp_im <= W_im22;
+                       end
+                5'd13 : begin
+                       temp_re <= W_re24;
+                       temp_im <= W_im24;
+                       end
+                5'd14 : begin
+                       temp_re <= W_re26;
+                       temp_im <= W_im26;
+                       end
+                5'd15 : begin
+                       temp_re <= W_re28;
+                       temp_im <= W_im28;
+                       end       
+                5'd16 : begin
+                       temp_re <= W_re30;
+                       temp_im <= W_im30;
+                       end
+                5'd17 : begin
+                       temp_re <= W_re32;
+                       temp_im <= W_im32;
+                       end
+                5'd18 : begin
+                       temp_re <= W_re34;
+                       temp_im <= W_im34;
+                       end
+                5'd19 : begin
+                       temp_re <= W_re36;
+                       temp_im <= W_im36;
+                       end
+                5'd20 : begin
+                       temp_re <= W_re38;
+                       temp_im <= W_im38;
+                       end
+                5'd21 : begin
+                       temp_re <= W_re40;
+                       temp_im <= W_im40;
+                       end
+                5'd22 : begin
+                       temp_re <= W_re42;
+                       temp_im <= W_im42;
+                       end
+                5'd23 : begin
+                       temp_re <= W_re44;
+                       temp_im <= W_im44;
+                       end
+                5'd24 : begin
+                       temp_re <= W_re46;
+                       temp_im <= W_im46;
+                       end
+                5'd25 : begin
+                       temp_re <= W_re48;
+                       temp_im <= W_im48;
+                       end
+                5'd26 : begin
+                       temp_re <= W_re50;
+                       temp_im <= W_im50;
+                       end
+                5'd27 : begin
+                       temp_re <= W_re52;
+                       temp_im <= W_im52;
+                       end
+                5'd28 : begin
+                       temp_re <= W_re54;
+                       temp_im <= W_im54;
+                       end
+                5'd29 : begin
+                       temp_re <= W_re56;
+                       temp_im <= W_im56;
+                       end
+                5'd30 : begin
+                       temp_re <= W_re58;
+                       temp_im <= W_im58;
+                       end
+                5'd31 : begin
+                       temp_re <= W_re60;
+                       temp_im <= W_im60;
+                       end
+                5'd0 : begin
+                       temp_re <= W_re62;
+                       temp_im <= W_im62;
+                       end       
               endcase
     	end
     	else if (N==16) begin
             case(cnt[3:0])//-1
-                4'd1 : begin
+                4'd2 : begin
                        temp_re <= W_re0;
                        temp_im <= W_im0;
-                       end
-                4'd2 : begin
-                       temp_re <= W_re2;
-                       temp_im <= W_im2;
                        end
                 4'd3 : begin
                        temp_re <= W_re4;
                        temp_im <= W_im4;
-                       end            
+                       end
                 4'd4 : begin
-                       temp_re <= W_re6;
-                       temp_im <= W_im6;
-                       end                        
-                4'd5 : begin
                        temp_re <= W_re8;
                        temp_im <= W_im8;
-                       end
-                4'd6 : begin
-                       temp_re <= W_re10;
-                       temp_im <= W_im10;
-                       end
-                4'd7 : begin
+                       end            
+                4'd5 : begin
                        temp_re <= W_re12;
                        temp_im <= W_im12;
-                       end       
-                4'd8 : begin
-                       temp_re <= W_re14;
-                       temp_im <= W_im14;
-                       end
-                4'd9 : begin
+                       end                        
+                4'd6 : begin
                        temp_re <= W_re16;
                        temp_im <= W_im16;
                        end
-                4'd10: begin
-                       temp_re <= W_re18;
-                       temp_im <= W_im18;
-                       end
-                4'd11: begin
+                4'd7 : begin
                        temp_re <= W_re20;
                        temp_im <= W_im20;
                        end
-                4'd12: begin
-                       temp_re <= W_re22;
-                       temp_im <= W_im22;
-                       end
-                4'd13: begin
+                4'd8 : begin
                        temp_re <= W_re24;
                        temp_im <= W_im24;
-                       end
-                4'd14: begin
-                       temp_re <= W_re26;
-                       temp_im <= W_im26;
-                       end
-                4'd15: begin
+                       end       
+                4'd9 : begin
                        temp_re <= W_re28;
                        temp_im <= W_im28;
+                       end
+                4'd10 : begin
+                       temp_re <= W_re32;
+                       temp_im <= W_im32;
+                       end
+                4'd11: begin
+                       temp_re <= W_re36;
+                       temp_im <= W_im36;
+                       end
+                4'd12: begin
+                       temp_re <= W_re40;
+                       temp_im <= W_im40;
+                       end
+                4'd13: begin
+                       temp_re <= W_re44;
+                       temp_im <= W_im44;
+                       end
+                4'd14: begin
+                       temp_re <= W_re48;
+                       temp_im <= W_im48;
+                       end
+                4'd15: begin
+                       temp_re <= W_re52;
+                       temp_im <= W_im52;
+                       end
+                4'd0: begin
+                       temp_re <= W_re56;
+                       temp_im <= W_im56;
                        end       
-                4'd0 : begin
-                       temp_re <= W_re30;
-                       temp_im <= W_im30;
+                4'd1 : begin
+                       temp_re <= W_re60;
+                       temp_im <= W_im60;
                        end
               endcase
     	end
     	else if (N==8)begin
             case(cnt[2:0])
-                3'd2 : begin
+                3'd3 : begin
                        temp_re <= W_re0;
                        temp_im <= W_im0;
-                       end
-                3'd3 : begin
-                       temp_re <= W_re4;
-                       temp_im <= W_im4;
                        end
                 3'd4 : begin
                        temp_re <= W_re8;
                        temp_im <= W_im8;
-                       end            
+                       end
                 3'd5 : begin
-                       temp_re <= W_re12;
-                       temp_im <= W_im12;
-                       end                        
-                3'd6 : begin
                        temp_re <= W_re16;
                        temp_im <= W_im16;
-                       end
-                3'd7 : begin
-                       temp_re <= W_re20;
-                       temp_im <= W_im20;
-                       end
-                3'd0 : begin
+                       end            
+                3'd6 : begin
                        temp_re <= W_re24;
                        temp_im <= W_im24;
-                       end       
+                       end                        
+                3'd7 : begin
+                       temp_re <= W_re32;
+                       temp_im <= W_im32;
+                       end
+                3'd0 : begin
+                       temp_re <= W_re40;
+                       temp_im <= W_im40;
+                       end
                 3'd1 : begin
-                       temp_re <= W_re28;
-                       temp_im <= W_im28;
+                       temp_re <= W_re48;
+                       temp_im <= W_im48;
+                       end       
+                3'd2 : begin
+                       temp_re <= W_re56;
+                       temp_im <= W_im56;
                        end
               endcase
     	end
     	else if (N==4) begin
             case(cnt[1:0])
-                2'd3 : begin
+                2'd0 : begin
                        temp_re <= W_re0;
                        temp_im <= W_im0;
-                       end
-                2'd0 : begin
-                       temp_re <= W_re8;
-                       temp_im <= W_im8;
                        end
                 2'd1 : begin
                        temp_re <= W_re16;
                        temp_im <= W_im16;
-                       end            
+                       end
                 2'd2 : begin
-                       temp_re <= W_re24;
-                       temp_im <= W_im24;
+                       temp_re <= W_re32;
+                       temp_im <= W_im32;
+                       end            
+                2'd3 : begin
+                       temp_re <= W_re48;
+                       temp_im <= W_im48;
                        end            
               endcase
     	end
     	else begin//if (N==2) begin
             case(cnt[0])
-                2'd0 : begin
+                2'd1 : begin
                        temp_re <= W_re0;
                        temp_im <= W_im0;
                        end
-                2'd1 : begin
-                       temp_re <= W_re16;
-                       temp_im <= W_im16;
+                2'd0 : begin
+                       temp_re <= W_re32;
+                       temp_im <= W_im32;
                        end
               endcase
     	end
