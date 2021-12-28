@@ -36,7 +36,7 @@ module Stage #(
 	parameter N =32
 )(
 	input 			nrst,clk,bf_en,
-    input [6:0]     cnt,
+	input [6:0]     cnt,
 	input [BW-2:0] 	inReal,inImag,
 	input 			valid,
 	output[BW-1:0] 	outReal,outImag
