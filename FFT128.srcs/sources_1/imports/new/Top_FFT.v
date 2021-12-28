@@ -51,10 +51,13 @@ wire [in_BW+3:0] sig4[1:0];
 wire [in_BW+4:0] sig5[1:0];
 wire [in_BW+5:0] sig6[1:0];
 
-wire	en_s1,en_s5,en_s6;
+wire en_s1;
 reg	en_s2;
-reg [2:0] en_s4;
 reg	[1:0] en_s3;
+reg [2:0] en_s4;
+reg [3:0] en_s5;
+reg en_s6;
+wire en_s7;
 
 Counter cnt0(nrst,clk,start, valid,cnt);
 
@@ -69,28 +72,44 @@ Stage_last #(in_BW+7,1 ) stage7(nrst,clk,en_s6   ,sig5[0],sig5[1], valid, sig6[0
 assign outReal = sig6[0][in_BW+5 : cut_BW];
 assign outImag = sig6[1][in_BW+5 : cut_BW];
 
-assign en_s1 = cnt[5];
+assign en_s1 = cnt[6];
 always@(posedge clk)
   if(!nrst)
     en_s2 <= 0;
   else if(valid)
-    en_s2 <= cnt[4];
+    en_s2 <= cnt[5];
 always@(posedge clk)
   if(!nrst)
     en_s3 <= 0;
   else if(valid) begin
-    en_s3[0]   <= cnt[3];
+    en_s3[0] <= cnt[4];
     en_s3[1] <= en_s3[0];
   end
+  
 always@(posedge clk)
-  if(!nrst)
-    en_s4 <= 0;
-  else if(valid) begin
-    en_s4[0] <= cnt[2];
-		en_s4[2:1]<=en_s4[1:0];
-	end
-assign en_s5 = cnt[1];
-assign en_s6 = ~cnt[0];
+    if(!nrst)
+        en_s4 <= 0;
+    else if(valid) begin
+        en_s4[0] <= cnt[3];
+        en_s4[2:1]<=en_s4[1:0];
+    end
+	
+always@(posedge clk)
+    if(!nrst)
+        en_s5 <= 0;
+    else if(valid) begin
+        en_s5[0] <= cnt[2];
+        en_s5[3:1] <= en_s5[2:0];
+    end
 
+always@(posedge clk)
+    if(!nrst)
+        en_s6 <= 0;
+    else if(valid) begin
+        en_s6 <= cnt[1];
+
+    end
+
+assign en_s7 <= ~cnt[0]
 
 endmodule
