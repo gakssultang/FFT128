@@ -21,8 +21,7 @@
 
 
 
-module BF 
-#(
+module BF #(
     parameter BW =16
 )(
     input signed [BW-2:0] Gr,Gi,Hr,Hi,
