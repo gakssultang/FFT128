@@ -33,8 +33,8 @@ Revision History
 
 module Top_FFT #(	
 	parameter in_BW = 16,
-	parameter out_BW= 22,
-	parameter cut_BW= 6
+	parameter out_BW= 23,
+	parameter cut_BW= 7
 ) (
 	input                      nrst,clk,start,
 	input                      valid,
@@ -57,12 +57,14 @@ reg [2:0] en_s4;
 reg	[1:0] en_s3;
 
 Counter cnt0(nrst,clk,start, valid,cnt);
-Stage #(in_BW+1,32) stage1(nrst,clk,en_s1,cnt,inReal,inImag, valid, sig1[0],sig1[1]);
-Stage #(in_BW+2,16) stage2(nrst,clk,en_s2,cnt,sig1[0],sig1[1], valid, sig2[0],sig2[1]);
-Stage #(in_BW+3,8 ) stage3(nrst,clk,en_s3[1],cnt,sig2[0],sig2[1], valid, sig3[0],sig3[1]);
-Stage #(in_BW+4,4 ) stage4(nrst,clk,en_s4[2],cnt,sig3[0],sig3[1], valid, sig4[0],sig4[1]);
-Stage #(in_BW+5,2 ) stage5(nrst,clk,en_s5,cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
-Stage6 #(in_BW+6,1 ) stage6(nrst,clk,en_s6   ,sig5[0],sig5[1], valid, sig6[0],sig6[1]);
+
+Stage #(in_BW+1,64) stage1(nrst,clk,en_s1,cnt,inReal,inImag, valid, sig1[0],sig1[1]);
+Stage #(in_BW+2,32) stage2(nrst,clk,en_s1,cnt,inReal,inImag, valid, sig1[0],sig1[1]);
+Stage #(in_BW+3,16) stage3(nrst,clk,en_s2,cnt,sig1[0],sig1[1], valid, sig2[0],sig2[1]);
+Stage #(in_BW+4,8 ) stage4(nrst,clk,en_s3[1],cnt,sig2[0],sig2[1], valid, sig3[0],sig3[1]);
+Stage #(in_BW+5,4 ) stage5(nrst,clk,en_s4[2],cnt,sig3[0],sig3[1], valid, sig4[0],sig4[1]);
+Stage #(in_BW+6,2 ) stage6(nrst,clk,en_s5,cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
+Stage_last #(in_BW+7,1 ) stage7(nrst,clk,en_s6   ,sig5[0],sig5[1], valid, sig6[0],sig6[1]);
 
 assign outReal = sig6[0][in_BW+5 : cut_BW];
 assign outImag = sig6[1][in_BW+5 : cut_BW];
