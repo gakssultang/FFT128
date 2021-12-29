@@ -60,8 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -71,12 +69,12 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/bitelab/FFT128/FFT128.cache/wt [current_project]
-  set_property parent.project_path D:/bitelab/FFT128/FFT128.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/bitelab-pc/Downloads/FFT128/FFT128.cache/wt [current_project]
+  set_property parent.project_path C:/Users/bitelab-pc/Downloads/FFT128/FFT128.xpr [current_project]
   set_property ip_output_repo D:/bitelab/FFT128/FFT128.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/bitelab/FFT128/FFT128.runs/synth_1/Top_FFT.dcp
-  read_xdc D:/bitelab/FFT128/FFT128.srcs/constrs_1/new/lab2.xdc
+  add_files -quiet C:/Users/bitelab-pc/Downloads/FFT128/FFT128.runs/synth_1/Top_FFT.dcp
+  read_xdc C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/constrs_1/new/lab2.xdc
   link_design -top Top_FFT -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

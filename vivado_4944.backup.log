@@ -1,0 +1,463 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 29 12:00:27 2021
+# Process ID: 4944
+# Current directory: C:/Users/bitelab-pc/Downloads/FFT128
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12652 C:\Users\bitelab-pc\Downloads\FFT128\FFT128.xpr
+# Log file: C:/Users/bitelab-pc/Downloads/FFT128/vivado.log
+# Journal file: C:/Users/bitelab-pc/Downloads/FFT128\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/bitelab-pc/Downloads/FFT128/FFT128.xpr
+INFO: [Project 1-313] Project file moved from 'D:/bitelab/FFT128' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 791.812 ; gain = 79.914
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/BF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_Reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stage_last
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_FFT
+WARNING: [VRFC 10-756] identifier in_BW is used before its declaration [C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v:37]
+WARNING: [VRFC 10-756] identifier out_BW is used before its declaration [C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v:38]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_Top_FFT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.Shift_Reg(BW=17,N=64)
+Compiling module xil_defaultlib.BF(BW=17)
+Compiling module xil_defaultlib.MULT(BW=17,N=64)
+Compiling module xil_defaultlib.Stage(BW=17,N=64)
+Compiling module xil_defaultlib.Shift_Reg(BW=18)
+Compiling module xil_defaultlib.BF(BW=18)
+Compiling module xil_defaultlib.MULT(BW=18)
+Compiling module xil_defaultlib.Stage(BW=18)
+Compiling module xil_defaultlib.Shift_Reg(BW=19,N=16)
+Compiling module xil_defaultlib.BF(BW=19)
+Compiling module xil_defaultlib.MULT(BW=19,N=16)
+Compiling module xil_defaultlib.Stage(BW=19,N=16)
+Compiling module xil_defaultlib.Shift_Reg(BW=20,N=8)
+Compiling module xil_defaultlib.BF(BW=20)
+Compiling module xil_defaultlib.MULT(BW=20,N=8)
+Compiling module xil_defaultlib.Stage(BW=20,N=8)
+Compiling module xil_defaultlib.Shift_Reg(BW=21,N=4)
+Compiling module xil_defaultlib.BF(BW=21)
+Compiling module xil_defaultlib.MULT(BW=21,N=4)
+Compiling module xil_defaultlib.Stage(BW=21,N=4)
+Compiling module xil_defaultlib.Shift_Reg(BW=22,N=2)
+Compiling module xil_defaultlib.BF(BW=22)
+Compiling module xil_defaultlib.MULT(BW=22,N=2)
+Compiling module xil_defaultlib.Stage(BW=22,N=2)
+Compiling module xil_defaultlib.Shift_Reg(BW=23,N=1)
+Compiling module xil_defaultlib.BF(BW=23)
+Compiling module xil_defaultlib.Stage_last(BW=23)
+Compiling module xil_defaultlib.Top_FFT
+Compiling module xil_defaultlib.tb_Top_FFT
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_Top_FFT_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_Top_FFT_behav -key {Behavioral:sim_1:Functional:tb_Top_FFT} -tclbatch {tb_Top_FFT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_Top_FFT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_Top_FFT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 886.695 ; gain = 88.695
+run 10 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+relaunch_xsim_kernel: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 929.707 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 929.707 ; gain = 0.000
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+[Wed Dec 29 12:13:50 2021] Launched synth_1...
+Run output will be captured here: C:/Users/bitelab-pc/Downloads/FFT128/FFT128.runs/synth_1/runme.log
+[Wed Dec 29 12:13:50 2021] Launched impl_1...
+Run output will be captured here: C:/Users/bitelab-pc/Downloads/FFT128/FFT128.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/BF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_Reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stage_last
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_FFT
+WARNING: [VRFC 10-756] identifier in_BW is used before its declaration [C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v:37]
+WARNING: [VRFC 10-756] identifier out_BW is used before its declaration [C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v:38]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_Top_FFT
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.Shift_Reg(BW=17,N=64)
+Compiling module xil_defaultlib.BF(BW=17)
+Compiling module xil_defaultlib.MULT(BW=17,N=64)
+Compiling module xil_defaultlib.Stage(BW=17,N=64)
+Compiling module xil_defaultlib.Shift_Reg(BW=18)
+Compiling module xil_defaultlib.BF(BW=18)
+Compiling module xil_defaultlib.MULT(BW=18)
+Compiling module xil_defaultlib.Stage(BW=18)
+Compiling module xil_defaultlib.Shift_Reg(BW=19,N=16)
+Compiling module xil_defaultlib.BF(BW=19)
+Compiling module xil_defaultlib.MULT(BW=19,N=16)
+Compiling module xil_defaultlib.Stage(BW=19,N=16)
+Compiling module xil_defaultlib.Shift_Reg(BW=20,N=8)
+Compiling module xil_defaultlib.BF(BW=20)
+Compiling module xil_defaultlib.MULT(BW=20,N=8)
+Compiling module xil_defaultlib.Stage(BW=20,N=8)
+Compiling module xil_defaultlib.Shift_Reg(BW=21,N=4)
+Compiling module xil_defaultlib.BF(BW=21)
+Compiling module xil_defaultlib.MULT(BW=21,N=4)
+Compiling module xil_defaultlib.Stage(BW=21,N=4)
+Compiling module xil_defaultlib.Shift_Reg(BW=22,N=2)
+Compiling module xil_defaultlib.BF(BW=22)
+Compiling module xil_defaultlib.MULT(BW=22,N=2)
+Compiling module xil_defaultlib.Stage(BW=22,N=2)
+Compiling module xil_defaultlib.Shift_Reg(BW=23,N=1)
+Compiling module xil_defaultlib.BF(BW=23)
+Compiling module xil_defaultlib.Stage_last(BW=23)
+Compiling module xil_defaultlib.Top_FFT
+Compiling module xil_defaultlib.tb_Top_FFT
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_Top_FFT_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_Top_FFT_behav -key {Behavioral:sim_1:Functional:tb_Top_FFT} -tclbatch {tb_Top_FFT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_Top_FFT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_Top_FFT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 929.707 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+relaunch_xsim_kernel: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 931.656 ; gain = 0.508
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 931.656 ; gain = 0.508
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/BF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_Reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stage_last
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_FFT
+WARNING: [VRFC 10-756] identifier in_BW is used before its declaration [C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v:37]
+WARNING: [VRFC 10-756] identifier out_BW is used before its declaration [C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v:38]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_Top_FFT
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.Shift_Reg(BW=17,N=64)
+Compiling module xil_defaultlib.BF(BW=17)
+Compiling module xil_defaultlib.MULT(BW=17,N=64)
+Compiling module xil_defaultlib.Stage(BW=17,N=64)
+Compiling module xil_defaultlib.Shift_Reg(BW=18)
+Compiling module xil_defaultlib.BF(BW=18)
+Compiling module xil_defaultlib.MULT(BW=18)
+Compiling module xil_defaultlib.Stage(BW=18)
+Compiling module xil_defaultlib.Shift_Reg(BW=19,N=16)
+Compiling module xil_defaultlib.BF(BW=19)
+Compiling module xil_defaultlib.MULT(BW=19,N=16)
+Compiling module xil_defaultlib.Stage(BW=19,N=16)
+Compiling module xil_defaultlib.Shift_Reg(BW=20,N=8)
+Compiling module xil_defaultlib.BF(BW=20)
+Compiling module xil_defaultlib.MULT(BW=20,N=8)
+Compiling module xil_defaultlib.Stage(BW=20,N=8)
+Compiling module xil_defaultlib.Shift_Reg(BW=21,N=4)
+Compiling module xil_defaultlib.BF(BW=21)
+Compiling module xil_defaultlib.MULT(BW=21,N=4)
+Compiling module xil_defaultlib.Stage(BW=21,N=4)
+Compiling module xil_defaultlib.Shift_Reg(BW=22,N=2)
+Compiling module xil_defaultlib.BF(BW=22)
+Compiling module xil_defaultlib.MULT(BW=22,N=2)
+Compiling module xil_defaultlib.Stage(BW=22,N=2)
+Compiling module xil_defaultlib.Shift_Reg(BW=23,N=1)
+Compiling module xil_defaultlib.BF(BW=23)
+Compiling module xil_defaultlib.Stage_last(BW=23)
+Compiling module xil_defaultlib.Top_FFT
+Compiling module xil_defaultlib.tb_Top_FFT
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_Top_FFT_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_Top_FFT_behav -key {Behavioral:sim_1:Functional:tb_Top_FFT} -tclbatch {tb_Top_FFT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_Top_FFT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_Top_FFT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 932.816 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+relaunch_xsim_kernel: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 932.816 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 932.816 ; gain = 0.000
+run 10 us
+save_wave_config {C:/Users/bitelab-pc/Downloads/FFT128/tb_Top_FFT_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/bitelab-pc/Downloads/FFT128/tb_Top_FFT_behav.wcfg
+set_property xsim.view C:/Users/bitelab-pc/Downloads/FFT128/tb_Top_FFT_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+[Wed Dec 29 13:29:43 2021] Launched synth_1...
+Run output will be captured here: C:/Users/bitelab-pc/Downloads/FFT128/FFT128.runs/synth_1/runme.log
+[Wed Dec 29 13:29:44 2021] Launched impl_1...
+Run output will be captured here: C:/Users/bitelab-pc/Downloads/FFT128/FFT128.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_Top_FFT' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_imag.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/binary_in_real.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_Top_FFT_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db11d447296e3c5762d4f4e49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_FFT_behav xil_defaultlib.tb_Top_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_Top_FFT_behav -key {Behavioral:sim_1:Functional:tb_Top_FFT} -tclbatch {tb_Top_FFT.tcl} -view {C:/Users/bitelab-pc/Downloads/FFT128/tb_Top_FFT_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/bitelab-pc/Downloads/FFT128/tb_Top_FFT_behav.wcfg
+source tb_Top_FFT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_Top_FFT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 945.535 ; gain = 0.000
+run 10 us
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 29 16:27:02 2021...

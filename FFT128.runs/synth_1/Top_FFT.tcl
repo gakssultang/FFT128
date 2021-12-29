@@ -16,28 +16,26 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/bitelab/FFT128/FFT128.cache/wt [current_project]
-set_property parent.project_path D:/bitelab/FFT128/FFT128.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/bitelab-pc/Downloads/FFT128/FFT128.cache/wt [current_project]
+set_property parent.project_path C:/Users/bitelab-pc/Downloads/FFT128/FFT128.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
 set_property ip_output_repo d:/bitelab/FFT128/FFT128.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/BF.v
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v
-  D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/BF.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v
+  C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -47,8 +45,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/bitelab/FFT128/FFT128.srcs/constrs_1/new/lab2.xdc
-set_property used_in_implementation false [get_files D:/bitelab/FFT128/FFT128.srcs/constrs_1/new/lab2.xdc]
+read_xdc C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/constrs_1/new/lab2.xdc
+set_property used_in_implementation false [get_files C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/constrs_1/new/lab2.xdc]
 
 
 synth_design -top Top_FFT -part xc7z020clg400-1
