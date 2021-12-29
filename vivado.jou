@@ -36,3 +36,8 @@ close_sim
 reset_run synth_1
 launch_runs impl_1 -jobs 6
 wait_on_run impl_1
+launch_simulation
+open_wave_config C:/Users/bitelab-pc/Downloads/FFT128/tb_Top_FFT_behav.wcfg
+source tb_Top_FFT.tcl
+run 10 us
+run 10 us
