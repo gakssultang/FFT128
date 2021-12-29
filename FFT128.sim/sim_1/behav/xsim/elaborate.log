@@ -4,38 +4,4 @@ Running: D:/xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7267603db1
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Counter
-Compiling module xil_defaultlib.Shift_Reg(BW=17,N=64)
-Compiling module xil_defaultlib.BF(BW=17)
-Compiling module xil_defaultlib.MULT(BW=17,N=64)
-Compiling module xil_defaultlib.Stage(BW=17,N=64)
-Compiling module xil_defaultlib.Shift_Reg(BW=18)
-Compiling module xil_defaultlib.BF(BW=18)
-Compiling module xil_defaultlib.MULT(BW=18)
-Compiling module xil_defaultlib.Stage(BW=18)
-Compiling module xil_defaultlib.Shift_Reg(BW=19,N=16)
-Compiling module xil_defaultlib.BF(BW=19)
-Compiling module xil_defaultlib.MULT(BW=19,N=16)
-Compiling module xil_defaultlib.Stage(BW=19,N=16)
-Compiling module xil_defaultlib.Shift_Reg(BW=20,N=8)
-Compiling module xil_defaultlib.BF(BW=20)
-Compiling module xil_defaultlib.MULT(BW=20,N=8)
-Compiling module xil_defaultlib.Stage(BW=20,N=8)
-Compiling module xil_defaultlib.Shift_Reg(BW=21,N=4)
-Compiling module xil_defaultlib.BF(BW=21)
-Compiling module xil_defaultlib.MULT(BW=21,N=4)
-Compiling module xil_defaultlib.Stage(BW=21,N=4)
-Compiling module xil_defaultlib.Shift_Reg(BW=22,N=2)
-Compiling module xil_defaultlib.BF(BW=22)
-Compiling module xil_defaultlib.MULT(BW=22,N=2)
-Compiling module xil_defaultlib.Stage(BW=22,N=2)
-Compiling module xil_defaultlib.Shift_Reg(BW=23,N=1)
-Compiling module xil_defaultlib.BF(BW=23)
-Compiling module xil_defaultlib.Stage_last(BW=23)
-Compiling module xil_defaultlib.Top_FFT
-Compiling module xil_defaultlib.tb_Top_FFT
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Top_FFT_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

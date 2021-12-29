@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue Dec 28 16:11:41 2021
+| Date             : Wed Dec 29 13:31:55 2021
 | Host             : DESKTOP-ACIBK5V running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_FFT_power_routed.rpt -pb Top_FFT_power_summary_routed.pb -rpx Top_FFT_power_routed.rpx
 | Design           : Top_FFT
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.377        |
+| Total On-Chip Power (W)  | 0.162        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.268        |
-| Device Static (W)        | 0.108        |
+| Dynamic (W)              | 0.057        |
+| Device Static (W)        | 0.105        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.7         |
-| Junction Temperature (C) | 29.3         |
+| Max Ambient (C)          | 83.1         |
+| Junction Temperature (C) | 26.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,22 +49,21 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.020 |        3 |       --- |             --- |
-| Slice Logic             |     0.019 |      936 |       --- |             --- |
-|   LUT as Logic          |     0.016 |      548 |     53200 |            1.03 |
-|   CARRY4                |     0.002 |       64 |     13300 |            0.48 |
-|   Register              |     0.001 |      271 |    106400 |            0.25 |
-|   LUT as Shift Register |    <0.001 |        1 |     17400 |           <0.01 |
-|   Others                |     0.000 |       32 |       --- |             --- |
-| Signals                 |     0.055 |     1715 |       --- |             --- |
-| DSPs                    |     0.106 |       24 |       220 |           10.91 |
-| I/O                     |     0.068 |       68 |       125 |           54.40 |
-| Static Power            |     0.108 |          |           |                 |
-| Total                   |     0.377 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |     0.005 |     1162 |       --- |             --- |
+|   LUT as Logic |     0.004 |      525 |     53200 |            0.99 |
+|   CARRY4       |    <0.001 |       64 |     13300 |            0.48 |
+|   Register     |    <0.001 |      268 |    106400 |            0.25 |
+|   Others       |     0.000 |       24 |       --- |             --- |
+| Signals        |     0.008 |     1508 |       --- |             --- |
+| DSPs           |     0.018 |       24 |       220 |           10.91 |
+| I/O            |     0.024 |       68 |       125 |           54.40 |
+| Static Power   |     0.105 |          |           |                 |
+| Total          |     0.162 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,11 +72,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.210 |       0.201 |      0.008 |
-| Vccaux    |       1.800 |     0.016 |       0.005 |      0.011 |
+| Vccint    |       1.000 |     0.040 |       0.032 |      0.008 |
+| Vccaux    |       1.800 |     0.012 |       0.002 |      0.010 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.033 |       0.032 |      0.001 |
+| Vcco18    |       1.800 |     0.012 |       0.011 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -86,7 +85,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,7 +135,7 @@ Table of Contents
 +-------+--------+-----------------+
 | Clock | Domain | Constraint (ns) |
 +-------+--------+-----------------+
-| clk   | clk    |             2.0 |
+| clk   | clk    |            12.0 |
 +-------+--------+-----------------+
 
 
@@ -149,21 +148,21 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| Top_FFT   |     0.268 |
-|   cnt0    |     0.014 |
-|   stage1  |     0.024 |
-|     mult0 |     0.020 |
-|   stage2  |     0.029 |
-|     mult0 |     0.022 |
-|   stage3  |     0.030 |
-|     mult0 |     0.023 |
-|   stage4  |     0.030 |
-|     mult0 |     0.022 |
-|   stage5  |     0.033 |
-|     mult0 |     0.024 |
-|   stage6  |     0.027 |
-|     mult0 |     0.019 |
-|   stage7  |     0.009 |
+| Top_FFT   |     0.057 |
+|   cnt0    |     0.002 |
+|   stage1  |     0.004 |
+|     mult0 |     0.004 |
+|   stage2  |     0.005 |
+|     mult0 |     0.004 |
+|   stage3  |     0.005 |
+|     mult0 |     0.004 |
+|   stage4  |     0.005 |
+|     mult0 |     0.004 |
+|   stage5  |     0.005 |
+|     mult0 |     0.004 |
+|   stage6  |     0.005 |
+|     mult0 |     0.004 |
+|   stage7  |     0.002 |
 +-----------+-----------+
 
 

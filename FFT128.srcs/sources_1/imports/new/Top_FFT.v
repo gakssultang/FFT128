@@ -56,7 +56,8 @@ wire en_s1;
 reg	 en_s2;
 reg	[1:0] en_s3;
 reg [2:0] en_s4;
-reg [3:0] en_s5;
+//reg [3:0] en_s5;
+wire en_s5;
 reg en_s6;
 wire en_s7;
 
@@ -66,7 +67,8 @@ Stage #(in_BW+1,64) stage1(nrst,clk,en_s1,   cnt,inReal,inImag,   valid, sig1[0]
 Stage #(in_BW+2,32) stage2(nrst,clk,en_s2,   cnt,sig1[0],sig1[1], valid, sig2[0],sig2[1]);
 Stage #(in_BW+3,16) stage3(nrst,clk,en_s3[1],cnt,sig2[0],sig2[1], valid, sig3[0],sig3[1]);
 Stage #(in_BW+4,8 ) stage4(nrst,clk,en_s4[2],cnt,sig3[0],sig3[1], valid, sig4[0],sig4[1]);
-Stage #(in_BW+5,4 ) stage5(nrst,clk,en_s5[3],cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
+//Stage #(in_BW+5,4 ) stage5(nrst,clk,en_s5[3],cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
+Stage #(in_BW+5,4 ) stage5(nrst,clk,en_s5,cnt,sig4[0],sig4[1], valid, sig5[0],sig5[1]);
 Stage #(in_BW+6,2 ) stage6(nrst,clk,en_s6,   cnt,sig5[0],sig5[1], valid, sig6[0],sig6[1]);
 Stage_last #(in_BW+7,1 ) stage7(nrst,clk,en_s7   ,sig6[0],sig6[1], valid, sig7[0],sig7[1]);
 
@@ -95,6 +97,7 @@ always@(posedge clk)
         en_s4[2:1]<=en_s4[1:0];
     end
 	
+/*
 always@(posedge clk)
     if(!nrst)
         en_s5 <= 0;
@@ -102,6 +105,9 @@ always@(posedge clk)
         en_s5[0] <= cnt[2];
         en_s5[3:1] <= en_s5[2:0];
     end
+*/
+
+assign en_s5 = ~cnt[2];
 
 always@(posedge clk)
     if(!nrst)
@@ -110,6 +116,6 @@ always@(posedge clk)
         en_s6 <= cnt[1];
     end
 
-assign en_s7 = ~cnt[0];
+assign en_s7 = cnt[0];
 
 endmodule

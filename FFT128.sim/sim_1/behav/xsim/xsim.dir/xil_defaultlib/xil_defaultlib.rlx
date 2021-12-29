@@ -2,12 +2,12 @@
 2017.4
 Dec 15 2017
 21:07:18
-D:/bitelab/FFT128/FFT128.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v,1640672620,verilog,,,,tb_Top_FFT,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/BF.v,1640666850,verilog,,D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v,,BF,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v,1640665438,verilog,,D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v,,Counter,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v,1640675319,verilog,,D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v,,MULT,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v,1640666807,verilog,,D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v,,Shift_Reg,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v,1640674762,verilog,,D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v,,Stage,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v,1640670011,verilog,,D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v,,Stage_last,,,,,,,,
-D:/bitelab/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v,1640673508,verilog,,D:/bitelab/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v,,Top_FFT,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.sim/sim_1/behav/xsim/glbl.v,1640746818,verilog,,,,glbl,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v,1640747883,verilog,,,,tb_Top_FFT,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/BF.v,1640746818,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v,,BF,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Counter.v,1640746818,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v,,Counter,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/MULT.v,1640746818,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v,,MULT,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Shift_Reg.v,1640746818,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v,,Shift_Reg,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage.v,1640746818,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v,,Stage,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Stage_last.v,1640746818,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v,,Stage_last,,,,,,,,
+C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sources_1/imports/new/Top_FFT.v,1640747613,verilog,,C:/Users/bitelab-pc/Downloads/FFT128/FFT128.srcs/sim_1/imports/new/tb_Top_FFT.v,,Top_FFT,,,,,,,,
