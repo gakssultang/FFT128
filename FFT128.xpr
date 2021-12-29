@@ -32,7 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="29"/>
+    <Option Name="WTXSimLaunchSim" Val="30"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -148,21 +148,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/binary_in_imag.txt">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/binary_in_imag.txt"/>
-          <Attr Name="ImportTime" Val="1640567405"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/binary_in_real.txt">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/binary_in_real.txt"/>
-          <Attr Name="ImportTime" Val="1640567405"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/tb_Top_FFT_behav.wcfg">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Lab_SD2019_2_asgn/binary_in_imag.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../drive-download-20211227T010604Z-001/files/4회차_중_Verilog_HW/Lab_SD2019_2_asgn/binary_in_imag.txt"/>
+          <Attr Name="ImportTime" Val="1640567405"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Lab_SD2019_2_asgn/binary_in_real.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../drive-download-20211227T010604Z-001/files/4회차_중_Verilog_HW/Lab_SD2019_2_asgn/binary_in_real.txt"/>
+          <Attr Name="ImportTime" Val="1640567405"/>
         </FileInfo>
       </File>
       <Config>

@@ -5,11 +5,11 @@ module tb_Top_FFT;
 reg nrst,clk;
 
 
-reg [15:0] input_re[191:0];
-reg [15:0] input_im[191:0];
+reg [15:0] input_re[383:0];
+reg [15:0] input_im[383:0];
 
-reg [15:0] output_re[191:0];
-reg [15:0] output_im[191:0];
+reg [15:0] output_re[383:0];
+reg [15:0] output_im[383:0];
 
 wire [15:0] inReal,inImag;
 wire [15:0] outReal,outImag;
@@ -53,13 +53,13 @@ initial begin
 
 
   #(292*`p +1) dumpfile = $fopen("binary_out_real.txt","w");
-  for(i = 0; i<192;i=i+1)begin
+  for(i = 0; i<384;i=i+1)begin
   $fwrite(dumpfile,"%b\n",output_re[i]);
   end
   $fclose(dumpfile);
   
     dumpfile = $fopen("binary_out_imag.txt","w");
-    for(i = 0; i<192;i=i+1)begin
+    for(i = 0; i<384;i=i+1)begin
     $fwrite(dumpfile,"%b\n",output_im[i]);
     end
     $fclose(dumpfile);
